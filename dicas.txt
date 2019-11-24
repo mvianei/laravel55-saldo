@@ -1,0 +1,11 @@
+Para criar o projeto:
+	composer create-project --prefer-dist laravel/laravel nome-do-projeto
+
+Para recriar as tabelas:
+    php artisan migrate:refresh
+
+    Para inserir registros default:
+        php artisan migrate:refresh --seed
+
+Para criar o controller
+    php artisan make:controller Admin\\UserController
