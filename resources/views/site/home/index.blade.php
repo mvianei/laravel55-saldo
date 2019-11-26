@@ -72,12 +72,18 @@
         <div class="top-right links">
             @auth
             <a href="{{ route('home') }}">Home</a><br>
+            <a href="{{ route('admin') }}">Admin</a><br>
             <a href="{{ route('profile') }}"><img src="img/bootstrap4.jpg" height="30pt"> Meu perfil</a><br>
-            <a href="{{ route('profile_material') }}"><img src="img/material_lite.png" height="30pt"> Meu perfil Material Lite</a><br>
-            <a href="{{ route('profile_materialize') }}"><img src="img/materialize.png" height="30pt"> Meu perfil Materialize</a><br>
-            <a href="{{ route('profile_mdbootstrap') }}"><img src="img/logo-mdb-jquery-small.png" height="30pt"> Meu perfil MDBootstrap</a><br>
-            <a href="{{ route('profile_framework7') }}"><img src="img/framework7.jpg" height="30pt"> Meu perfil Framework7</a><br>
-            <a href="{{ route('profile_mdc') }}"><img src="img/ic_material_design_24px.svg" height="30pt"> Meu perfil MDC</a><br>
+            <a href="{{ route('profile_material') }}"><img src="img/material_lite.png" height="30pt"> Meu perfil
+                Material Lite</a><br>
+            <a href="{{ route('profile_materialize') }}"><img src="img/materialize.png" height="30pt"> Meu perfil
+                Materialize</a><br>
+            <a href="{{ route('profile_mdbootstrap') }}"><img src="img/logo-mdb-jquery-small.png" height="30pt"> Meu
+                perfil MDBootstrap</a><br>
+            <a href="{{ route('profile_framework7') }}"><img src="img/framework7.jpg" height="30pt"> Meu perfil
+                Framework7</a><br>
+            <a href="{{ route('profile_mdc') }}"><img src="img/ic_material_design_24px.svg" height="30pt"> Meu perfil
+                MDC</a><br>
             @else
             <a href="{{ route('login') }}">Login</a>
             <a href="{{ route('register') }}">Register</a>

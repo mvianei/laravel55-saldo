@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\Balance;
 use App\Models\Historic;
+use App\Models\Usuario;
 
 class User extends Authenticatable
 {
@@ -58,7 +59,5 @@ class User extends Authenticatable
             ->get()
             ->first();
         //first - tras apenas o primeiro registro
-
-
     }
 }

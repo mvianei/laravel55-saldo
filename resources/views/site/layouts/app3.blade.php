@@ -80,7 +80,7 @@
                     </a>
                     <ul class="collapse list-unstyled" id="homeSubmenu4">
                         <li>
-                            <a href="#"><i class="fas fa-users"></i> Usuários</a>
+                            <a href="usuario"><i class="fas fa-users"></i> Usuários</a>
                         </li>
                     </ul>
                 </li>

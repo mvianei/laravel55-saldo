@@ -35,6 +35,9 @@ Route::get('meu-perfil_materialize', 'Admin\UserController@profileMaterialize')-
 Route::get('meu-perfil_mdbootstrap', 'Admin\UserController@profileMdbootstrap')->name('profile_mdbootstrap')->middleware('auth');
 Route::get('meu-perfil_framework7', 'Admin\UserController@profileFramework7')->name('profile_framework7')->middleware('auth');
 Route::get('meu-perfil_mdc', 'Admin\UserController@profileMDC')->name('profile_mdc')->middleware('auth');
+Route::get('usuario', 'BalanceController@usuario')->name('balance.usuarios');
+Route::any('usuario-search', 'BalanceController@searchUsuario')->name('usuario.search');
+Route::any('admin', 'AdminController@index')->name('admin.home');
 
 Route::get('/', 'Site\SiteController@index')->name('home');
 /* Route::get("cep_teste", function (Canducci\Cep\Contracts\ICep $c) {

@@ -131,6 +131,18 @@ class BalanceController extends Controller
         return view('admin.balance.historics', compact('historics', 'types'));
     }
 
+    public function usuario(Usuario $usuario)
+    {
+        $usuarios = auth()->user()
+            ->usuarios()
+            ->with(['userSender'])
+            ->paginate($this->totalPage);
+
+        $types = $usuario->type();
+
+        return view('admin.balance.usuarios', compact('usuarios', 'types'));
+    }
+
     public function cep()
     {
         return view('admin.balance.ceps');
