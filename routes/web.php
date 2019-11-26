@@ -38,9 +38,9 @@ Route::get('meu-perfil_mdc', 'Admin\UserController@profileMDC')->name('profile_m
 
 Route::get('/', 'Site\SiteController@index')->name('home');
 /* Route::get("cep_teste", function (Canducci\Cep\Contracts\ICep $c) {
-    $cep = $c->find('91788116');
-    $cepInfo = $cep->toJson();
-    dd($cepInfo);
+$cep = $c->find('91788116');
+$cepInfo = $cep->toJson();
+dd($cepInfo);
 }); */
 
 Route::get(
@@ -48,6 +48,6 @@ Route::get(
         return view('message');
     }
 );
- Route::post('/getmsg', 'AjaxController@index');
+Route::post('/getmsg', 'AjaxController@index');
 
 Auth::routes();

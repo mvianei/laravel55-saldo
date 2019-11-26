@@ -147,9 +147,9 @@ class BalanceController extends Controller
         //        $response = redirect()
         //          ->away('https://viacep.com.br/ws/91788116/json')
         //        ->header('Content-Type', 'application/json');
-        $cep = $c->find($m_cep);
-        $cepInfo = $cep->toJson();
-        dd($cepInfo);
+        //$cep = $c->find($m_cep);
+        //$cepInfo = $cep->toJson();
+        //dd($cepInfo);
 
         //$historics = $historic->search($dataForm, $this->totalPage);
 

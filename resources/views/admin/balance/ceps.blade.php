@@ -12,7 +12,7 @@
 <div class="box">
     <div class="box-header">
         @include('admin.includes.alerts')
-        <form action="{{ route('cep.search') }}" method="GET" class="form form-inline">
+        <form action="{{ route('cep.search') }}" method="POST" class="form form-inline">
             {!! csrf_field() !!}
             <input type="number" name="cep" class="form-control" placeholder="CEP" required>
             <button type="submit" class="btn btn-primary">Pesquisar</button>

@@ -29,45 +29,14 @@
     </script>
     <script language="JavaScript" type="text/javascript" src="../../js/MascaraValidacao.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-    <script>
-        //Check to see if the window is top if not then display button
-            $(window).scroll(function(){
-                    if ($(this).scrollTop() > 100) {
-                            $('.scrollToTop').fadeIn();
-                    } else {
-                            $('.scrollToTop').fadeOut();
-                    }
-            });
-
-            //Click event to scroll to top
-            $('.scrollToTop').click(function(){
-                    $('html, body').animate({scrollTop : 0},800);
-                    return false;
-            });
-
-            $(document).ready(function(){
-                    //Check to see if the window is top if not then display button
-                    $(window).scroll(function(){
-                            if ($(this).scrollTop() > 100) {
-                                    $('.scrollToTop').fadeIn();
-                            } else {
-                                    $('.scrollToTop').fadeOut();
-                            }
-                    });
-                    //Click event to scroll to top
-                    $('.scrollToTop').click(function(){
-                            $('html, body').animate({scrollTop : 0},800);
-                            return false;
-                    });
-            });
-    </script>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
         <!-- Sidebar  -->
-        <nav id="sidebar" style="box-shadow: 0 0.5rem 1rem rgba(44, 240, 214,1.15)!important;">
+        {{-- <nav id="sidebar" style="box-shadow: 0 0.5rem 1rem rgba(44, 240, 214,1.15)!important;"> --}}
+        <nav id="sidebar">
             <div class="sidebar-header">
                 @if (auth()->user()->image != null)
                 <img src="{{ url('storage/logo2.png') }}">
@@ -83,7 +52,10 @@
                             <a href="cliente"><i class="fas fa-handshake"></i> Cliente</a>
                         </li>
                         <li>
-                            <a href="devedor"><i class="fas fa-thumbs-down"></i> Devedor</a>
+                            <a href="devedor">
+                                <i class="fas fa-thumbs-down"></i>
+                                Devedor
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -98,6 +70,17 @@
                         </li>
                         <li>
                             <a href="#"><i class="fas fa-history"></i> Histórico</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#homeSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fa fa-tools"></i>
+                        Administração
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu4">
+                        <li>
+                            <a href="#"><i class="fas fa-users"></i> Usuários</a>
                         </li>
                     </ul>
                 </li>
@@ -140,8 +123,8 @@
     </div>
     <a href="#" class="scrollToTop"></a>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
-        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script> --}}
     {{--     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
@@ -195,6 +178,19 @@
                             document.getElementById("cpfcnpj").setAttribute("maxlength", "14");
                         }
                     }
+                    //Check to see if the window is top if not then display button
+                    $(window).scroll(function(){
+                            if ($(this).scrollTop() > 100) {
+                                    $('.scrollToTop').fadeIn();
+                            } else {
+                                    $('.scrollToTop').fadeOut();
+                            }
+                    });
+                    //Click event to scroll to top
+                    $('.scrollToTop').click(function(){
+                            $('html, body').animate({scrollTop : 0},800);
+                            return false;
+                    });
     </script>
 </body>
 
